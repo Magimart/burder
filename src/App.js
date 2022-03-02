@@ -372,6 +372,8 @@ var url = 'https://jsonplaceholder.typicode.com/users'
 
 
 
+
+
  /* 
  * Check (6/6) 
  * 
@@ -402,9 +404,7 @@ var url = 'https://jsonplaceholder.typicode.com/users'
  */
 
 
-
-
-const data = [{
+const fruitCollection = [{
 
   fruit: 'apple',
   vegetable: 'tomato',
@@ -484,9 +484,9 @@ vegetableEl.id = 'vegetable';
 
 const parseData = () => {
 
-let fruitItems =    data.filter((el) => el.fruit && el.fruit ).map((el) => el.fruit)
-let vegetableItems =    data.filter((el) => el.vegetable && el.vegetable ).map((el) => el.vegetable)
-let legumeItems =    data.filter((el) => el.legume && el.legume ).map((el) => el.legume)
+let fruitItems =    fruitCollection.filter((el) => el.fruit && el.fruit ).map((el) => el.fruit)
+let vegetableItems =    fruitCollection.filter((el) => el.vegetable && el.vegetable ).map((el) => el.vegetable)
+let legumeItems =    fruitCollection.filter((el) => el.legume && el.legume ).map((el) => el.legume)
 
  let collection = {
           fruits: {
