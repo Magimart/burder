@@ -5,9 +5,10 @@ function App() {
   return (
     <div className="body">
       <header className="header">        
-          Burda Media Assignment
+          Burda
       </header>
        {/* question one */}
+
        <HoriAndVertical/>
        {/* question 2 */}
        <DebugDiv/>
@@ -17,7 +18,6 @@ function App() {
        <GetItem/>
        {/* question five */}
        <GetUsers/>
-       
 
     </div>
   );
@@ -27,7 +27,7 @@ export default App;
 
 
 
-//===============================question 1
+//_________________________question 0ne
 
 export const HoriAndVertical = () => {
 
@@ -63,9 +63,6 @@ export const HoriAndVertical = () => {
 }
 
 
-//===============================question 2
-
-
  export const DebugDiv = () => {
 
 
@@ -95,14 +92,12 @@ export const HoriAndVertical = () => {
    return (
      <>
           <div className="content" id="content">
-               question two
+            question two
           </div>
      </>
    )
  }
 
-
-//===============================question 3
 
 
  export const DebugFunction = () => {
@@ -125,119 +120,110 @@ export const HoriAndVertical = () => {
               // })();
 
   //____________________answer
-                          // (function() {
-                          //   for (let iAmANumber=0; iAmANumber < 10; iAmANumber++) {
-                                
-                          //     if (iAmANumber === 9) {
-                          //       document.querySelector('.thisiswrong').classList.add('hidden');
-                          //         document.querySelector('.thisisright').classList.add('success');
-                          //     }
-                                
-                          //   }
-                          // })();
+  (function() {
+    for (let iAmANumber=0; iAmANumber < 10; iAmANumber++) {
+        
+      if (iAmANumber === 9) {
+        document.querySelector('.thisiswrong').classList.add('hidden');
+          document.querySelector('.thisisright').classList.add('success');
+      }
+        
+    }
+  })();
             
 
    return (
         <>
-
-          <div className="divWrapper">
           <div className="thisiswrong">
             <span className="quesThree">question three</span>
-                 Where are the errors?
+            Where are the errors?
           </div>
-          <div className="thisisright">
-               Code worked!
-          </div>          </div>
-
+          <div className="thisisright hidden">
+            Code worked!
+          </div>
        </>
    )
  }
 
 
 
+export const GetItem = ()  => {
+
+
+ /* 
+ * Check (4/6) 
+ * 
+ * Generate the List based on given data by just using javascript.
+ */
+
+      const data = {
+        results: 5,
+        error: null,
+        data: [{
+            id: 1,
+            name: 'entry one',
+            aNumber: 42,
+          },
+          {
+            id: 2,
+            name: 'entry two',
+            aNumber: 104,
+          },
+          {
+            id: 3,
+            name: 'entry three',
+            aNumber: 31,
+          },
+          {
+            id: 4,
+            name: 'entry four',
+            aNumber: 80,
+          },
+          {
+            id: 5,
+            name: 'entry five',
+            aNumber: 15,
+          }
+        ]
+      };
+      
+      // Your Solution here:
+      //__________________--solution with vanilla
+
+      //_______________htlm
+        //   <h2>Hardcoded List</h2>
+        //   <ul id="items">
+        //     <li id='name1'>Entry One</li>
+        //     <li id='name4'>Entry Four</li>
+        //     <li id='name2'>Entry Two</li>
+        //   </ul>
+        // </div>
 
 
 
-//===============================question 4
-
-
- export const GetItem = ()  => {
-
-
-        /* 
-        * Check (4/6) 
-        * 
-        * Generate the List based on given data by just using javascript.
-        */
+        function getItem(items){
  
-       const data = {
-         results: 5,
-         error: null,
-         data: [{
-             id: 1,
-             name: 'entry one',
-             aNumber: 42,
-           },
-           {
-             id: 2,
-             name: 'entry two',
-             aNumber: 104,
-           },
-           {
-             id: 3,
-             name: 'entry three',
-             aNumber: 31,
-           },
-           {
-             id: 4,
-             name: 'entry four',
-             aNumber: 80,
-           },
-           {
-             id: 5,
-             name: 'entry five',
-             aNumber: 15,
-           }
-         ]
-       };
-       
-       // Your Solution here:
-       //__________________--solution with vanilla
+              items &&  items.data.forEach((el) => {
+              console.log(el)
+                if(el.id === 1){
+                  document.querySelector('#name1').innerHTML = el.name
+                }
+                if(el.id === 4){
+                  document.querySelector('#name4').innerHTML = el.name
+                }
+                if(el.id === 2){
+                  document.querySelector('#name2').innerHTML = el.name
+                }
+                
+          })
+           getItem(data)
+            //_____________________________________solution two with node(es6)
  
-       //_______________htlm
-         //   <h2>Hardcoded List</h2>
-         //   <ul id="items">
-         //     <li id='name1'>Entry One</li>
-         //     <li id='name4'>Entry Four</li>
-         //     <li id='name2'>Entry Two</li>
-         //   </ul>
-         // </div>
- 
- 
- 
-        //  function getItemNames(items){
-  
-        //        items &&  items.data.forEach((el) => {
-        //        console.log(el)
-        //          if(el.id === 1){
-        //            document.querySelector('#name1').innerHTML = el.name
-        //          }
-        //          if(el.id === 4){
-        //            document.querySelector('#name4').innerHTML = el.name
-        //          }
-        //          if(el.id === 2){
-        //            document.querySelector('#name2').innerHTML = el.name
-        //          }                 
-        //      })
-        //    }
-            // getItemNames(data)
-             //_____________________________________solution two with node(es6)
-  
- 
-             return (
-               <>
-                     <div className="list">
-                      <h2>Hardcoded List</h2>
+
+            return (
+              <>
+                    <div className="list">
+                     <h2>Hardcoded List</h2>
 
                           {
                                 data && data.data.map((el, i)=> {
@@ -252,26 +238,21 @@ export const HoriAndVertical = () => {
                                    )
                               })
                              }
-                        
-                     </div>
- 
-                     <div>
-                       <h2>Programmatic List</h2>
-                       <ul id='printTextHere'>
-                            {/* check solution above its deplayed in the DOM */}
-                       </ul>
-                     </div>
-               </>
-          )
-        
-     }
+                    </div>
 
+                    <div>
+                      <h2>Programmatic List</h2>
+                      <ul id='printTextHere'>
+                           {/* check solution above its deplayed in the DOM */}
+                      </ul>
+                    </div>
+              </>
+         )
+       }
+    } 
+    
+    
 
-
-
- //====================================question 5  
- 
- 
 /* 
  * Check (5/6) 
  * 
@@ -284,91 +265,95 @@ export const HoriAndVertical = () => {
 
 
 
+
 //_________________answer_____________solution with react hooks
 
-const GetUsers = () => {
-
-  const [users, setUsers] = useState([]);
 
 
-        const fetchUsersUrl = 'https://jsonplaceholder.typicode.com/users';
 
-        async function fetchUsers(url){
+ const GetUsers = () => {
 
-          const response = await fetch(url);
-
-              await response.json()
-
-                 .then((el) => {
-                      setUsers(el)
-                 })           
-         }
-           useEffect(() => {
-             fetchUsers(fetchUsersUrl)
-           },[])
+   const [users, setUsers] = useState([]);
 
 
-      return (
-               <>
-                 <div class="wrapper">
-                   <div class="box box1">
-                       {
-                       users && users.map((user,i) => {
-                         return (
-                           <div key={i}
-                              className="usersApi"
-                           >
-                                <h2 className="userApiHeader"> user : {user.name}</h2>
-                           </div>
-                         )
-                       })
-                       }
-                   </div>
-                    
-                 </div> 
-              </>
-      )
+         const fetchUsersUrl = 'https://jsonplaceholder.typicode.com/users';
 
-}
+         async function fetchUsers(url){
+
+           const response = await fetch(url);
+
+               await response.json()
+
+                  .then((el) => {
+                       setUsers(el)
+                  })           
+          }
+            useEffect(() => {
+              fetchUsers(fetchUsersUrl)
+            },[])
+
+
+       return (
+                <>
+                  <div class="wrapper">
+                    <div class="box box1">
+                        {
+                        users && users.map((user) => {
+                          return (
+                            <>
+                             <h2> user : {user.name}</h2>
+                            </>
+                          )
+                        })
+                        }
+                    </div>
+                     
+                  </div> 
+               </>
+       )
+
+ }
 
 //_____________________________________________answer 2 with vanilla
-//_____________________uncoment code below please
-
+ // creating object with recursive functions __________
+ var url = 'https://jsonplaceholder.typicode.com/users'
 
 /* 
-* Check (5/6) 
-* 
-* There is an API: https://jsonplaceholder.typicode.com/users
-* 
-* write some code to call that API, retrieve the user data (10 entries) and
-* display the full name (property "name") in the boxes
-*/
-
+ * Check (5/6) 
+ * 
+ * There is an API: https://jsonplaceholder.typicode.com/users
+ * 
+ * write some code to call that API, retrieve the user data (10 entries) and
+ * display the full name (property "name") in the boxes
+ */
+ 
 var url = 'https://jsonplaceholder.typicode.com/users'
 
-// async function fetchApi (){
+async function fetchApi (){
 
-//      const response = await fetch(url);
-//         await response.json()
-//       .then((data) => {
-//         let users = data                                  
-//         users && users.filter((el)=> el.name && el.name).map((user) => { 
-        
-//                     let userName = user.name;
-//                     //________create user by iterating thru
-//                      getUserNames(userName);             
-//                })  
-//        }) .catch(function(error) {
-//          console.log(error);
-//        })          
-// }
-//    fetchApi(url)
+      const response = await fetch(url);
+         await response.json()
+       .then((data) => {
+         let users = data                                  
+         users && users.filter((el)=> el.name && el.name).map((user) => { 
+         
+                     let userName = user.name;
+                     //________create user by iterating thru
+                      getUserNames(userName);             
+                })  
+        }) .catch(function(error) {
+          console.log(error);
+        })          
+}
+   fetchApi(url)
 
-//     const getUserNames = (users) => {
-//        console.log(users)          
-//        users && users? ( document.getElementById("box1").innerHTML = users):""
-//     }
+     const getUserNames = (users) => {
+        console.log(users)          
+        users && users? ( document.getElementById("box1").innerHTML = users):""
+     }
 
+
+ 
 
 
 
@@ -588,13 +573,6 @@ const populateDom = () => {
                             applyStyles()
           }
 populateDom()
-
-
-
-
-
-
-
 
 
 

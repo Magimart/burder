@@ -58,6 +58,23 @@ header {
 }
 
 
+/* question three css */
+
+.divWrapper{
+        position: relative;
+        color: #acacac;
+        background-color: aqua;
+        padding: 1em;
+        margin: 1em;
+        width: max-content;
+
+}
+.thisisright{
+  position: relative;
+  padding: .5em;
+}
+
+
 /* number four css */
 
 
@@ -97,3 +114,10 @@ h2 {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
+.usersApi{
+ position: relative;
+ background-color: rgba(6, 165, 165, 0.678); 
+}
+.userApiHeader{
+  border-bottom-style: groove;}
