@@ -17,9 +17,10 @@ header {
 .inner-div {
   background: #fff;
   padding: 20px;
-  width: 200px;
+  width: max-content ;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   /* transform: scale(-2); */
+  border-radius: 1em;
   
   margin: 0 auto;
 
@@ -30,17 +31,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20em;
+    height: 40em;
+    background-color: #acacac;
+    margin: 2em 2em 5em 2em;
+ 
 }
 
 .content {
   display: block;
-  background: #fff;
-  color: #333;
+  background: rgb(22, 85, 90);
+  color: rgb(27, 58, 55);
   padding: 10px;
   margin: 10px;
   width: 300px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 1em;
+  padding: 1em;
 }
 
 .hidden {
@@ -63,7 +69,7 @@ header {
 .divWrapper{
         position: relative;
         color: #acacac;
-        background-color: aqua;
+        background-color: rgb(32, 68, 68);
         padding: 1em;
         margin: 1em;
         width: max-content;
@@ -77,12 +83,23 @@ header {
 
 /* number four css */
 
-
 h2 {
   margin: 0 4px;
   padding: 0;
 }
+.noFourH2{
+  color:antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+.noSpan{
+      font-size: .6em;
+      margin-left: 2em;
+      background-color: #038a61;
+      padding: .3em;
+      border-radius: .5em; 
 
+}
 .list ul {
   list-style-type: none;
   padding: 0;
@@ -95,6 +112,24 @@ h2 {
   border-radius: 4px;
 }
 
+.listWrap{
+   position: relative;
+   height: 40em;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   background-color: #acacac;
+   margin-top: 5em;
+   align-items : center;
+  }
+
+  #innerListWrapper{
+    background-color: rgba(44, 41, 37, 0.644);
+    margin: 1em;
+    padding: 2em;
+    border-radius: .5em;    
+  }
+
 /* question five css */
 
 
@@ -102,6 +137,12 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
+}
+
+#listWrap5{
+   opacity: 50%;
+   z-index: 10;
+   margin-bottom: 5em;
 }
 
 .box {
@@ -120,4 +161,5 @@ h2 {
  background-color: rgba(6, 165, 165, 0.678); 
 }
 .userApiHeader{
-  border-bottom-style: groove;}
+  border-bottom-style: inset;
+}

@@ -54,7 +54,11 @@ export const HoriAndVertical = () => {
   return (
     <>
                 <div className="outer-div">
+
                  <div className="inner-div">
+                     <h2 className="noFourH2"> center horizontally & vertically
+                              <span className="noSpan"># one</span>
+                      </h2>
                     Please center me!
                   </div>
                 </div> 
@@ -95,6 +99,9 @@ export const HoriAndVertical = () => {
    return (
      <>
           <div className="content" id="content">
+                        <h2 className="noFourH2"> i made it work
+                              <span className="noSpan"># two</span>
+                      </h2>
                question two
           </div>
      </>
@@ -124,7 +131,7 @@ export const HoriAndVertical = () => {
               //   }
               // })();
 
-  //____________________answer
+  //____________________answer   _______________NOTE:   PLEASE UNCOMMENT AND RUN
                           // (function() {
                           //   for (let iAmANumber=0; iAmANumber < 10; iAmANumber++) {
                                 
@@ -141,9 +148,13 @@ export const HoriAndVertical = () => {
         <>
 
           <div className="divWrapper">
+                        <h2 className="noFourH2"> Where are the errors?
+                              <span className="noSpan"># three</span>
+                      </h2>
           <div className="thisiswrong">
+            
             <span className="quesThree">question three</span>
-                 Where are the errors?
+                
           </div>
           <div className="thisisright">
                Code worked!
@@ -236,8 +247,12 @@ export const HoriAndVertical = () => {
  
              return (
                <>
-                     <div className="list">
-                      <h2>Hardcoded List</h2>
+
+                  <div className="listWrap">
+                     <div className="list" id="innerListWrapper">
+                      <h2 className="noFourH2">Hardcoded List
+                                       <span className="noSpan"># four</span>
+                      </h2>
 
                           {
                                 data && data.data.map((el, i)=> {
@@ -252,15 +267,17 @@ export const HoriAndVertical = () => {
                                    )
                               })
                              }
-                        
+
+                       <div>
+                                <h2>Programmatic List                        
+                         </h2>
+                         <ul id='printTextHere'>
+                              {/* check solution above its deplayed in the DOM */}
+                         </ul>
                      </div>
- 
-                     <div>
-                       <h2>Programmatic List</h2>
-                       <ul id='printTextHere'>
-                            {/* check solution above its deplayed in the DOM */}
-                       </ul>
+
                      </div>
+                  </div>
                </>
           )
         
@@ -310,21 +327,27 @@ const GetUsers = () => {
 
       return (
                <>
-                 <div class="wrapper">
-                   <div class="box box1">
-                       {
-                       users && users.map((user,i) => {
-                         return (
-                           <div key={i}
-                              className="usersApi"
-                           >
-                                <h2 className="userApiHeader"> user : {user.name}</h2>
-                           </div>
-                         )
-                       })
-                       }
-                   </div>
-                    
+                 <div className="listWrap"  id="listWrap5" >
+
+                       <div  id="innerListWrapper">
+                       <h2 className="noFourH2">users
+                                       <span className="noSpan"># five</span>
+                      </h2>
+                            
+                            <div className="box box1" >
+                                {
+                                users && users.map((user,i) => {
+                                  return (
+                                    <div key={i}
+                                        className="usersApi"
+                                    >
+                                          <h2 className="userApiHeader">{user.name}</h2>
+                                    </div>
+                                  )
+                                })
+                                }
+                          </div>
+                       </div>                    
                  </div> 
               </>
       )
@@ -368,8 +391,6 @@ var url = 'https://jsonplaceholder.typicode.com/users'
 //        console.log(users)          
 //        users && users? ( document.getElementById("box1").innerHTML = users):""
 //     }
-
-
 
 
 
