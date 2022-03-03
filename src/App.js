@@ -1,12 +1,14 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
+import { HeaderSection, ViewPerformance } from './components/HeaderSection';
 
 function App() {
   return (
     <div className="body">
       <header className="header">        
-          Burda Media Assignment
+         <HeaderSection/>
       </header>
+      {/* <ViewPerformance/> */}
        {/* question one */}
        <HoriAndVertical/>
        {/* question 2 */}
@@ -16,15 +18,12 @@ function App() {
        {/* question four */}
        <GetItem/>
        {/* question five */}
-       <GetUsers/>
-       
-
+       <GetUsers/>  
     </div>
   );
 }
 
 export default App;
-
 
 
 //===============================question 1
@@ -166,9 +165,6 @@ export const HoriAndVertical = () => {
 
 
 
-
-
-
 //===============================question 4
 
 
@@ -297,7 +293,6 @@ export const HoriAndVertical = () => {
  * write some code to call that API, retrieve the user data (10 entries) and
  * display the full name (property "name") in the boxes
  */
-
 
 
 

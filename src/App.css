@@ -2,17 +2,119 @@
   text-align: center;
 }
 
+h2 {
+  margin: .4em;
+  padding: 1em;
+  font-size:large ;
+}
 
 header {
-  background-color: #282c34;
-  max-height: 10vh;
+  background-color: #245e68;
+  max-height: 23vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top:0;
+  }
+  .headerWrapper{
+    position: relative;
+    height: 20em;
+  }
+.viewAppBtn{
+    position: relative;
+    height: 3em;
+    background-color: peru;
+    margin: .2em;    
 }
+/* all buttons */
+button {
+  background-color: #5ca1e1;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  right: -30px;
+  transition: 0.5s;
+  color: #f3edef;
+  
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+/* end of btn */
+.viewPeformanceWrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgb(27, 20, 20);
+  display: flex;
+  flex-flow: column;
+  background-size: cover;
+  top: 9em;
+}
+.viewPerformanceBtn{
+  margin-left: 2em;
+}
+.viewBtnLive{
+  padding-left: .3em ;
+  background-color: black;
+  margin: .3em;
+  height: max-content;
+}
+.perBtnWrapper{
+    position: absolute;
+    top: 5em;
+    margin: 1em;
+}
+.performanceImage{
+  height: 100%;
+  object-position: center;
+}
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 
 .inner-div {
   background: #fff;
@@ -83,10 +185,7 @@ header {
 
 /* number four css */
 
-h2 {
-  margin: 0 4px;
-  padding: 0;
-}
+
 .noFourH2{
   color:antiquewhite;
   display: flex;
