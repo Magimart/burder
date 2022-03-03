@@ -80,7 +80,7 @@ button:hover:after {
   display: flex;
   flex-flow: column;
   background-size: cover;
-  top: 9em;
+  top: 12em;
 }
 .viewPerformanceBtn{
   margin-left: 2em;

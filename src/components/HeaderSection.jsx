@@ -33,7 +33,7 @@ export const HeaderSection = () => {
               {/* live performance  */}
               {showPage && showPage? (<> 
                                             <ViewPerformance/>
-                                          </> ): <ViewPerformance/>} 
+                                          </> ): ""} 
 
        </>
      )
