@@ -59,10 +59,10 @@ export const HeaderSection = () => {
                                 Continue with button to the Project 
                             </h2>
                         </div> 
-                    <a href='https://burder.vercel.app/'>
+                    <a href='https://github.com/Magimart/burder/'>
                         <button className="viewPerformanceBtn">
-                                view App Performace on
-                            <span className="viewBtnLive">live demo</span>
+                                view source code
+                            <span className="viewBtnLive">git rep</span>
                         </button>
                     </a>
 

@@ -213,7 +213,7 @@ img.bg {
 
 .listWrap{
    position: relative;
-   height: 40em;
+   height: 100%;
    display: flex;
    justify-content: center;
    width: 100%;
@@ -223,10 +223,11 @@ img.bg {
   }
 
   #innerListWrapper{
-    background-color: rgba(44, 41, 37, 0.644);
+    /* background-color: rgba(44, 41, 37, 0.644); */
     margin: 1em;
-    padding: 2em;
-    border-radius: .5em;    
+    padding: 1em;
+    border-radius: .5em; 
+    width: 600px;   
   }
 
 /* question five css */
@@ -253,11 +254,13 @@ img.bg {
   margin: 10px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  width: 100%;
 }
 
 .usersApi{
  position: relative;
  background-color: rgba(6, 165, 165, 0.678); 
+ width: 100%;
 }
 .userApiHeader{
   border-bottom-style: inset;
